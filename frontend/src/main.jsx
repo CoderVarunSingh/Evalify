@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.jsx'
 import { ClerkProvider } from '@clerk/react'
 
@@ -13,7 +12,7 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <ClerkProvider>
+     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
         <App />
      </ClerkProvider>
   </StrictMode>,

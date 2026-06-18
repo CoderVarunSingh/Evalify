@@ -1,24 +1,27 @@
-import { SignInButton, UserButton } from '@clerk/react'
+import { useUser, SignInButton, UserButton } from "@clerk/react";
 
 function App() {
+  const { isSignedIn } = useUser();
 
   return (
     <>
-     <h1>Welcome to the app</h1>
+      <h1 style={{ fontSize: "40px", color: "black" }}>
+        Welcome to the app
+      </h1>
 
-     <Signedout>
-      <SignInButton mode="modal">
-        <button>Login</button>
-      </SignInButton>
-     </Signedout>
+      {!isSignedIn && (
+        <SignInButton mode="modal">
+          <button>Login</button>
+        </SignInButton>
+      )}
 
-     <SignedIn>
-      <Signedout/>
-     </SignedIn>
-
-     <UserButton/>
+      {isSignedIn && <UserButton />}
     </>
-  )
+  );
 }
+
+// function App() {
+//   return <h1 style={{ fontSize: "40px", color: "black" }}>VISIBLE ✅</h1>;
+// }
 
 export default App;

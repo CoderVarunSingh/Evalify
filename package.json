@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "start": "npm run start --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"npm start --prefix backend\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/CoderVarunSingh/Evalify/issues"
   },
-  "homepage": "https://github.com/CoderVarunSingh/Evalify#readme"
+  "homepage": "https://github.com/CoderVarunSingh/Evalify#readme",
+  "dependencies": {
+    "@clerk/express": "^2.1.25",
+    "@stream-io/node-sdk": "^0.7.59"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
 }
