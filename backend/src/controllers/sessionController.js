@@ -103,8 +103,12 @@ export async function joinSession(req, res) {
 
         if(!session) return res.status(404).json({message: "Session not found"})
 
+        if(session.status !== "active") return res.status(400).json({message: "Session is not active....Cannot join an completed session"})
+
+        if(session.host.toString() === userId.toString()) return res.status(400).json({message: "You are the host of this session, So you cannot join as a participant"})
+
         // check if session is already full - has a participant
-        if(session.participant) return res.status(400).json({message: "Session is already full"})
+        if(session.participant) return res.status(409).json({message: "Session is already full"})
 
         session.participant = userId
         await session.save()
