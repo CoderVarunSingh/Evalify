@@ -1,0 +1,13 @@
+node_modules
+*/node_modules
+.git
+.github
+*.log
+.DS_Store
+dist
+frontend/dist
+.env
+backend/.env
+frontend/.env
+.idea
+.vscode

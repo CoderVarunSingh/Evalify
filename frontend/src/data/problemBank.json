@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "category": "Frontend",
+    "difficulty": "Easy",
+    "title": "Explain the difference between CSS Flexbox and Grid",
+    "text": "What are the main differences between CSS Flexbox and CSS Grid? When would you choose one over the other?"
+  },
+  {
+    "id": 2,
+    "category": "Backend",
+    "difficulty": "Medium",
+    "title": "Explain REST vs GraphQL",
+    "text": "Compare RESTful APIs and GraphQL. Discuss pros and cons and typical use cases."
+  },
+  {
+    "id": 3,
+    "category": "Algorithms",
+    "difficulty": "Hard",
+    "title": "Describe how a hash table works",
+    "text": "Explain the internal workings of a hash table, collision resolution strategies, and time complexities."
+  }
+]
