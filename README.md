@@ -430,7 +430,7 @@ Click the Sun/Moon icon on the top right navigation bar to toggle between dark m
 
 ## 📜 License
 
-This project is licensed under the **ISC License**. Feel free to use, modify, and distribute for educational or commercial projects.
+Feel free to use, modify, and distribute for educational or commercial projects.
 
 <p align="center">
   Developed with ❤️ by Varun Singh for modern technical hiring.
